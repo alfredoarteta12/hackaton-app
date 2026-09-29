@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import * as categoryService from '../services/categoryService';
 import * as eventService from '../services/eventService';
 import type { Category } from '../types/category';

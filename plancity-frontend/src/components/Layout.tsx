@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from 'react';
 import { Outlet, useNavigate, Link } from 'react-router';
 import { useAuth } from '../context/AuthContext';
 

@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import type { ChangeEvent, FormEvent } from 'react';
 import { getAllEvents, createEvent, updateEvent, deleteEvent } from '../services/eventService';
 import { getAllCategories } from '../services/categoryService';
 import type { Event, CreateEventPayload, UpdateEventPayload } from '../types/event';
@@ -55,7 +56,7 @@ function EventPage() {
     setFormData(EMPTY_FORM);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -71,7 +72,7 @@ function EventPage() {
     return new Date(localDateTime).toISOString();
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setError(null);
     setLoading(true);

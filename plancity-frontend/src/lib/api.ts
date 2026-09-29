@@ -3,7 +3,7 @@ import { tokenStorage } from "./tokenStorage";
 import { appRouter } from "../appRouter";
 
 export const api = axios.create({
-  baseURL: "http://localhost:3001",
+  baseURL: import.meta.env.VITE_API_BASE_URL ?? "http://localhost:3001",
 });
 
 // 1. Interceptor de Petición

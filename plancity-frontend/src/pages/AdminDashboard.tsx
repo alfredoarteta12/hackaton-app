@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import EventPage from './EventPage';
 import { useAuth } from '../context/AuthContext';

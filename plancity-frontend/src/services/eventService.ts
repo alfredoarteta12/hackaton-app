@@ -1,5 +1,5 @@
 import { api } from "../lib/api";
-import type { CreateEventPayload, UpdateEventPayload } from "../types/event";
+import type { CreateEventPayload, Event, UpdateEventPayload } from "../types/event";
 
 
 export async function getAllEvents(): Promise<Event[]> {
